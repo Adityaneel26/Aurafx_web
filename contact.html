@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AURAFX | Get in Touch for Digital Solutions</title>
+    <meta name="description" content="Contact AURAFX for professional web development, mobile apps, digital marketing, and branding services. Get a free consultation today.">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - AURAFX | Get in Touch for Digital Solutions">
+    <meta property="og:description" content="Contact AURAFX for professional web development, mobile apps, digital marketing, and branding services. Get a free consultation today.">
+    <meta property="og:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
+    <meta property="og:url" content="https://aurafx.in/contact.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar bg-white/85 backdrop-blur-xl border-b border-white/20 fixed w-full top-0 z-50 transition-all duration-300 overflow-visible">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="nav-brand nav-cta flex items-center transform transition-transform duration-300 hover:scale-105">
+                        <img src="assets/img/TRANSPARENT%20LOGO.png" alt="AURAFX logo" class="h-8 md:h-10 lg:h-12 object-contain max-h-12 glow" />
+                        <span class="sr-only">AURAFX</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Home</a>
+                    <a href="about.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">About</a>
+                    <a href="services.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Services</a>
+                    <a href="portfolio.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Portfolio</a>
+                    <a href="contact.html" class="nav-item text-blue-600 font-bold transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Contact</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="btn btn-primary btn-shine transform transition-all duration-300 hover:scale-105">
+                        <span class="flex items-center">
+                            Get Quote
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button aria-expanded="false" aria-label="Toggle menu" class="mobile-menu-button text-gray-700 hover:text-blue-600 focus:outline-none transform transition-transform duration-300 hover:scale-110 p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu - Outside navbar for proper z-index and visibility -->
+    <div class="mobile-menu hidden fixed top-16 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-200/20 py-4 z-40 md:hidden">
+        <div class="flex flex-col space-y-2 px-4 max-w-7xl mx-auto">
+            <a href="index.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Home</a>
+            <a href="about.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">About</a>
+            <a href="services.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Services</a>
+            <a href="portfolio.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Portfolio</a>
+            <a href="contact.html" class="mobile-menu-item text-blue-600 font-bold transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Contact</a>
+            <a href="contact.html" class="mobile-menu-item btn btn-primary mt-4 text-center">Get Quote</a>
+        </div>
+    </div>
+
+    <!-- Particles Container -->
+    <div class="particles-container fixed inset-0 pointer-events-none z-0"></div>
+
+    <main class="pt-16">
+        <!-- Page Header -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Get in touch with us to discuss your project and how we can help you succeed
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+            <div class="section-reveal">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+
+    <form id="contact-form" 
+          action="https://formspree.io/f/myzryeae" 
+          method="POST"
+          class="space-y-6">
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" required 
+                    class="form-control"
+                    placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" required 
+                    class="form-control"
+                    placeholder="Enter your email address">
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" 
+                    class="form-control"
+                    placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="company" class="form-label">Company</label>
+                <input type="text" id="company" name="company" 
+                    class="form-control"
+                    placeholder="Enter your company name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="service" class="form-label">Service Interested In</label>
+            <select id="service" name="service" class="form-control form-select">
+                <option value="">Select a service</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Mobile App Development">Mobile App Development</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Branding & Design">Branding & Design</option>
+                <option value="E-commerce Solutions">E-commerce Solutions</option>
+                <option value="SEO Services">SEO Services</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" 
+                class="form-control"
+                placeholder="Enter message subject">
+        </div>
+
+        <div class="form-group">
+            <label for="message" class="form-label">Message *</label>
+            <textarea id="message" name="message" rows="6" required 
+                class="form-control"
+                placeholder="Tell us about your project or inquiry"></textarea>
+        </div>
+
+        <div>
+            <button id="submit-btn" type="submit" 
+                class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full btn-shine flex justify-center items-center">
+                <span id="btn-text">Send Message <i class="fas fa-paper-plane ml-2"></i></span>
+                <span id="loader" class="hidden animate-spin ml-3 border-2 border-white border-t-transparent w-5 h-5 rounded-full"></span>
+            </button>
+        </div>
+
+        <!-- Success Message -->
+        <p id="success" class="hidden text-green-600 font-bold text-center text-xl transition-all duration-500">
+            ✔ Message sent successfully!
+        </p>
+
+        <!-- Error Message -->
+        <p id="error" class="hidden text-red-600 font-bold text-center text-xl transition-all duration-500">
+            ✖ Something went wrong. Please try again.
+        </p>
+
+    </form>
+</div>
+
+
+                    <!-- Contact Info -->
+                    <div class="section-reveal">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Our Office</h3>
+                                    <p class="text-gray-600">Anand, Gujarat, India</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-phone text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
+                                    <p class="text-gray-600">+91 70692 36992</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Email</h3>
+                                    <p class="text-gray-600">info@aurafx.in</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Business Hours</h3>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="mt-8">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/share/1CpNDjPWqR/?mibextid=wwXIfr" class="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-400 text-white p-3 rounded-lg hover:bg-blue-500 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/aurafxofficial?igsh=OHIydmg0a2RsenE1&utm_source=qr" class="bg-pink-600 text-white p-3 rounded-lg hover:bg-pink-700 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="mt-8">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Answers</h3>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900">How soon can you start my project?</h4>
+                                    <p class="text-gray-600 text-sm mt-1">We can typically start within 1-2 weeks of project confirmation.</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900">Do you provide ongoing support?</h4>
+                                    <p class="text-gray-600 text-sm mt-1">Yes, we offer maintenance and support packages for all our projects.</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900">What's your typical project timeline?</h4>
+                                    <p class="text-gray-600 text-sm mt-1">Timelines vary by project complexity, but most websites take 2-6 weeks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="bg-gray-100 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-96 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">Our Location</h3>
+                            <p class="text-blue-100 mt-2">Anand, Gujarat, India</p>
+                            <p class="text-blue-100 text-sm mt-4">We serve clients globally with our digital solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Don't wait any longer. Contact us today and let's create something amazing together.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+917069236992" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <a href="mailto:info@aurafx.in" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Email Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <h3 class="mb-4">
+                        <a href="index.html" class="inline-block">
+                            <img src="assets/img/WHITE%20LOGO.png" alt="AURAFX" class="h-6 md:h-8 lg:h-10 object-contain max-h-12" />
+                            <span class="sr-only">AURAFX</span>
+                        </a>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Professional digital solutions for your business growth. We craft elegant products and measurable results.
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.facebook.com/share/1CpNDjPWqR/?mibextid=wwXIfr" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/aurafxofficial?igsh=OHIydmg0a2RsenE1&utm_source=qr" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <form id="newsletter-form" class="flex items-center space-x-3">
+                            <input name="email" type="email" placeholder="Your email" required class="place-color form-control newsletter-input" />
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 color">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 color">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Anand,Gujarat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+91 70692 36992</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@aurafx.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <div class="flex flex-col md:flex-row md:justify-between items-center">
+                    <p class="mb-2 md:mb-0">&copy; <span id="current-year"></span> AURAFX. All rights reserved.</p>
+                    <p class="text-sm">Developed by <span class="font-semibold">Aditya Neel</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+   <script>
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    // UI elements
+    const btn = document.getElementById("submit-btn");
+    const btnText = document.getElementById("btn-text");
+    const loader = document.getElementById("loader");
+    const successMsg = document.getElementById("success");
+    const errorMsg = document.getElementById("error");
+
+    // Reset messages
+    successMsg.classList.add("hidden");
+    errorMsg.classList.add("hidden");
+
+    // Show loader
+    btn.disabled = true;
+    btnText.style.opacity = "0.5";
+    loader.classList.remove("hidden");
+
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { "Accept": "application/json" }
+    });
+
+    // Hide loader
+    btn.disabled = false;
+    btnText.style.opacity = "1";
+    loader.classList.add("hidden");
+
+    if (response.ok) {
+        successMsg.classList.remove("hidden");
+        successMsg.classList.add("scale-110");   // animation
+        setTimeout(() => successMsg.classList.remove("scale-110"), 300);
+
+        form.reset();
+    } else {
+        errorMsg.classList.remove("hidden");
+    }
+});
+</script>
+
+
+</body>
+</html>

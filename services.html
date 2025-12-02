@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - AURAFX | Web Development, Mobile Apps, Digital Marketing</title>
+    <meta name="description" content="AURAFX offers comprehensive digital services including web development, mobile apps, digital marketing, branding, and SEO solutions.">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services - AURAFX | Web Development, Mobile Apps, Digital Marketing">
+    <meta property="og:description" content="AURAFX offers comprehensive digital services including web development, mobile apps, digital marketing, branding, and SEO solutions.">
+    <meta property="og:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
+    <meta property="og:url" content="https://aurafx.in/services.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar bg-white/85 backdrop-blur-xl border-b border-white/20 fixed w-full top-0 z-50 transition-all duration-300 overflow-visible">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="nav-brand nav-cta flex items-center transform transition-transform duration-300 hover:scale-105">
+                        <img src="assets/img/TRANSPARENT%20LOGO.png" alt="AURAFX logo" class="h-8 md:h-10 lg:h-12 object-contain max-h-12 glow" />
+                        <span class="sr-only">AURAFX</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Home</a>
+                    <a href="about.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">About</a>
+                    <a href="services.html" class="nav-item text-blue-600 font-bold transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Services</a>
+                    <a href="portfolio.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Portfolio</a>
+                    <a href="contact.html" class="nav-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-2 rounded-lg hover:bg-blue-50">Contact</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="contact.html" class="btn btn-primary btn-shine transform transition-all duration-300 hover:scale-105">
+                        <span class="flex items-center">
+                            Get Quote
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button aria-expanded="false" aria-label="Toggle menu" class="mobile-menu-button text-gray-700 hover:text-blue-600 focus:outline-none transform transition-transform duration-300 hover:scale-110 p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu - Outside navbar for proper z-index and visibility -->
+    <div class="mobile-menu hidden fixed top-16 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-200/20 py-4 z-40 md:hidden">
+        <div class="flex flex-col space-y-2 px-4 max-w-7xl mx-auto">
+            <a href="index.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Home</a>
+            <a href="about.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">About</a>
+            <a href="services.html" class="mobile-menu-item text-blue-600 font-bold transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Services</a>
+            <a href="portfolio.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Portfolio</a>
+            <a href="contact.html" class="mobile-menu-item text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-4 py-3 rounded-lg hover:bg-blue-50">Contact</a>
+            <a href="contact.html" class="mobile-menu-item btn btn-primary mt-4 text-center">Get Quote</a>
+        </div>
+    </div>
+
+    <!-- Particles Container -->
+    <div class="particles-container fixed inset-0 pointer-events-none z-0"></div>
+
+    <main class="pt-16">
+        <!-- Page Header -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Comprehensive digital solutions tailored to your business needs
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <!-- Web Development -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 card-tilt section-reveal">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Web Development</h3>
+                        <p class="text-gray-600 mb-4">We create responsive, high-performance websites and web applications tailored to your business needs using the latest technologies and best practices.</p>
+                        
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Responsive Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                SEO Optimized
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Fast Loading
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Cross-browser Compatible
+                            </li>
+                        </ul>
+                        
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-blue-600 font-semibold">Starting at ₹15,000</span>
+                                <span class="text-gray-500">2-4 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html?service=Web Development" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full text-center block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile App Development -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 card-tilt section-reveal">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile App Development</h3>
+                        <p class="text-gray-600 mb-4">We develop user-friendly mobile applications that provide seamless experiences across all devices and platforms.</p>
+                        
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                iOS & Android
+                            </li>
+                              <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                best Security 
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                User-friendly UI/UX
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Fast Performance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                App Store Deployment
+                            </li>
+                        </ul>
+                        
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-blue-600 font-semibold">Starting at ₹30,000</span>
+                                <span class="text-gray-500">4-8 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html?service=Mobile App Development" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full text-center block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Digital Marketing -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 card-tilt section-reveal">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Marketing</h3>
+                        <p class="text-gray-600 mb-4">Our digital marketing services help you reach your target audience and achieve your business goals through data-driven strategies.</p>
+                        
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                SEO Optimization
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Social Media Marketing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Content Strategy
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Analytics & Reporting
+                            </li>
+                        </ul>
+                        
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-blue-600 font-semibold">Custom Packages</span>
+                                <span class="text-gray-500">Ongoing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html?service=Digital Marketing" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full text-center block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Branding & Design -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 card-tilt section-reveal">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Branding & Design</h3>
+                        <p class="text-gray-600 mb-4">We design compelling brand identities that communicate your values and resonate with your target audience.</p>
+                        
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Logo Design
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Brand Guidelines
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Marketing Materials
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Visual Identity
+                            </li>
+                        </ul>
+                        
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-blue-600 font-semibold">Starting at ₹10,000</span>
+                                <span class="text-gray-500">2-3 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html?service=Branding & Design" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full text-center block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- E-commerce Solutions -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 card-tilt section-reveal">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">E-commerce Solutions</h3>
+                        <p class="text-gray-600 mb-4">We build secure, scalable e-commerce solutions that provide excellent shopping experiences and drive conversions.</p>
+                        
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Secure Payments
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Inventory Management
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Order Tracking
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Mobile Optimized
+                            </li>
+                        </ul>
+                        
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-blue-600 font-semibold">Starting at ₹25,000</span>
+                                <span class="text-gray-500">4-6 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html?service=E-commerce Solutions" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full text-center block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SEO Services -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 card-tilt section-reveal">
+                        <div class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">SEO Services</h3>
+                        <p class="text-gray-600 mb-4">Our SEO strategies help your website rank higher in search results, increasing visibility and attracting qualified leads.</p>
+                        
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Keyword Research
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                On-page Optimization
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Link Building
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Performance Tracking
+                            </li>
+                        </ul>
+                        
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-blue-600 font-semibold">Monthly Packages</span>
+                                <span class="text-gray-500">Ongoing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="contact.html?service=SEO Services" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full text-center block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">How We Work</h2>
+                    <p class="text-xl text-gray-600">Our proven process ensures successful project delivery</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center section-reveal">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                            <div class="text-blue-600 text-4xl font-bold mb-4">01</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Consultation & Planning</h3>
+                            <p class="text-gray-600">We start by understanding your business goals and requirements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center section-reveal">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                            <div class="text-purple-600 text-4xl font-bold mb-4">02</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Development & Testing</h3>
+                            <p class="text-gray-600">Our team builds your solution with quality and precision</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center section-reveal">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+                            <div class="text-green-600 text-4xl font-bold mb-4">03</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Launch & Support</h3>
+                            <p class="text-gray-600">We deploy your project and provide ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Contact us today to discuss your project and get a free consultation.
+                </p>
+                <a href="contact.html" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 inline-block">
+                    Start Your Project
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <h3 class="mb-4">
+                        <a href="index.html" class="inline-block">
+                            <img src="assets/img/WHITE%20LOGO.png" alt="AURAFX" class="h-6 md:h-8 lg:h-10 object-contain max-h-12" />
+                            <span class="sr-only">AURAFX</span>
+                        </a>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Professional digital solutions for your business growth. We craft elegant products and measurable results.
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.facebook.com/share/1CpNDjPWqR/?mibextid=wwXIfr" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/aurafxofficial?igsh=OHIydmg0a2RsenE1&utm_source=qr" class="text-gray-300 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <form id="newsletter-form" class="flex items-center space-x-3">
+                            <input name="email" type="email" placeholder="Your email" required class="place-color form-control newsletter-input" />
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 color">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 color">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Anand,Gujarat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+91 70692 36992</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@aurafx.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <div class="flex flex-col md:flex-row md:justify-between items-center">
+                    <p class="mb-2 md:mb-0">&copy; <span id="current-year"></span> AURAFX. All rights reserved.</p>
+                    <p class="text-sm">Developed by <span class="font-semibold">Aditya Neel</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
