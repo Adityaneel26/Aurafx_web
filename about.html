@@ -32,6 +32,202 @@
     <meta property="og:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
     <meta property="og:url" content="https://aurafx.in/about.html">
     <meta property="og:type" content="website">
+    
+    <style>
+        /* Additional team styles */
+        .team-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .team-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .team-image {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .team-card:hover .team-image img {
+            transform: scale(1.1);
+        }
+        
+        .team-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        
+        .team-card:hover .team-overlay {
+            transform: translateY(0);
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .team-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .team-social a:hover {
+            background: #3b82f6;
+            transform: translateY(-3px);
+        }
+        
+        .team-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .team-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            filter: blur(40px);
+        }
+        
+        .team-shape-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .team-shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            left: 10%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .team-floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .team-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: white;
+        }
+        
+        .team-role {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .team-image {
+                height: 220px;
+            }
+            
+            .team-overlay {
+                padding: 1.5rem 1rem 1rem;
+            }
+        }
+        
+        /* Hover effects for team cards */
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .team-card:hover::before {
+            transform: translateX(100%);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
@@ -109,7 +305,7 @@
                     <div class="section-reveal">
                         <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
                         <p class="text-lg text-gray-600 mb-6">
-                            Founded in 2020, AURAFX has been at the forefront of digital innovation, helping businesses 
+                            Founded in 2022, AURAFX has been at the forefront of digital innovation, helping businesses 
                             of all sizes transform their ideas into reality. Our journey began with a simple mission: 
                             to create digital solutions that make a real impact.
                         </p>
@@ -225,8 +421,102 @@
             </div>
         </section>
 
+        <!-- Our Team Section -->
+        <section class="team-section py-20 relative">
+            <!-- Background shapes -->
+            <div class="team-shape team-shape-1"></div>
+            <div class="team-shape team-shape-2"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Meet Our Expert Team</h2>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                        Passionate professionals dedicated to transforming your digital presence
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Rahul Mehta - CEO -->
+                    <div class="team-card rounded-2xl overflow-hidden team-floating">
+                        <div class="team-badge team-glow">CEO</div>
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Rahul Mehta - CEO">
+                            <div class="team-overlay">
+                                <p class="team-desc">Visionary leader with 10+ years of experience in digital strategy and business development. Passionate about driving innovation.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Rahul Mehta</h3>
+                            <p class="team-role">CEO & Founder</p>
+                            <p class="team-desc mt-2">Strategic visionary with expertise in digital transformation and business growth.</p>
+                        </div>
+                    </div>
+
+                    <!-- Aditya Neel - Web Developer -->
+                    <div class="team-card rounded-2xl overflow-hidden team-floating" style="animation-delay: 0.2s;">
+                        <div class="team-badge team-glow">Lead Developer</div>
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Aditya Neel - Web Developer">
+                            <div class="team-overlay">
+                                <p class="team-desc">Full-stack developer specializing in modern web technologies. Creates scalable, high-performance applications.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Aditya Neel</h3>
+                            <p class="team-role">Lead Web Developer</p>
+                            <p class="team-desc mt-2">Expert in React, Node.js, and modern web frameworks. Builds scalable, high-performance applications.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mayur Chauhan - WordPress Developer -->
+                    <div class="team-card rounded-2xl overflow-hidden team-floating" style="animation-delay: 0.4s;">
+                        <div class="team-badge team-glow">WordPress Expert</div>
+                        <div class="team-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Mayur Chauhan - WordPress Developer">
+                            <div class="team-overlay">
+                                <p class="team-desc">WordPress wizard with extensive plugin development experience. Creates custom solutions for diverse business needs.</p>
+                                <div class="team-social">
+                                    <a href="#"><i class="fab fa-wordpress"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Mayur Chauhan</h3>
+                            <p class="team-role">WordPress Developer</p>
+                            <p class="team-desc mt-2">Specialist in custom WordPress development, themes, and plugins. Creates powerful CMS solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                    <p class="text-lg text-blue-100 mb-8">
+                        Our team combines technical expertise with creative vision to deliver outstanding results.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                        <span>Join Our Team</span>
+                        <i class="fas fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Our Process -->
-        <section class="py-16 bg-gray-50">
+        <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Process</h2>
@@ -284,7 +574,7 @@
                 <p class="text-xl text-blue-100 mb-8">
                     Ready to take your business to the next level? Contact us today for a free consultation.
                 </p>
-                <a href="contact.html" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 inline-block">
+                <a href="contact.html" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition duration-300 inline-block transform hover:scale-105">
                     Start Your Project
                 </a>
             </div>
@@ -371,5 +661,84 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Initialize team animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const teamCards = document.querySelectorAll('.team-card');
+            
+            // Add stagger animation to team cards
+            teamCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+                
+                // Add hover effect for mobile touch
+                card.addEventListener('touchstart', function() {
+                    this.classList.add('hover:shadow-xl');
+                }, { passive: true });
+            });
+            
+            // Counter animation for stats
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // The lower the slower
+            
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace('%', '').replace('+', '');
+                    
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+                    
+                    // Check if target is reached
+                    if (count < target) {
+                        // Add inc to count and output in counter
+                        counter.innerText = Math.ceil(count + inc) + (counter.textContent.includes('%') ? '%' : (counter.textContent.includes('+') ? '+' : ''));
+                        // Call function every ms
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target + (counter.textContent.includes('%') ? '%' : (counter.textContent.includes('+') ? '+' : ''));
+                    }
+                };
+                
+                // Start animation when element is in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(counter);
+            });
+            
+            // Section reveal animations
+            const sections = document.querySelectorAll('.section-reveal');
+            
+            const revealSection = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            
+            const sectionObserver = new IntersectionObserver(revealSection, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            sections.forEach(section => {
+                section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+                sectionObserver.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
