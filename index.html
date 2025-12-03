@@ -33,7 +33,11 @@
     <meta name="twitter:description" content="AURAFX provides professional web development, mobile apps, and digital solutions. Transform your business with our expert services.">
     <meta name="twitter:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
 </head>
-
+<style>
+    .text-color{
+        color: white !important;
+    }
+</style>
 <body class="bg-gray-50">
     <nav class="navbar bg-white/85 backdrop-blur-xl border-b border-white/20 fixed w-full top-0 z-50 transition-all duration-300 overflow-visible">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -298,6 +302,59 @@
             </div>
         </section>
 
+        <!-- Client Logos Marquee Section -->
+        <section class="clients-section">
+            <div class="clients-container">
+                <div class="clients-header">
+                    <h2>Trusted by Leading Brands</h2>
+                    <p>We've partnered with amazing companies to deliver exceptional digital solutions</p>
+                </div>
+                
+                <!-- Marquee Track 1 -->
+                <div class="marquee-container">
+                    <div class="marquee-track" id="marqueeTrack1">
+                        <!-- Logos will be dynamically loaded by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Marquee Track 2 (Reverse Direction) -->
+                <div class="marquee-container" style="margin-top: 1rem;">
+                    <div class="marquee-track reverse" id="marqueeTrack2">
+                        <!-- Logos will be dynamically loaded by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Client Stats
+                <div class="clients-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="50">0</span>+
+                        </div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="8">0</span>+
+                        </div>
+                        <div class="stat-label">Industries Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="98">0</span>%
+                        </div>
+                        <div class="stat-label">Client Retention</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <span class="counter" data-target="4">0</span>+
+                        </div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </section>
+
         <section id="process" class="py-16 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
@@ -330,21 +387,187 @@
             </div>
         </section>
 
-        <section class="py-16 bg-white">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What Our <span class="text-blue-600">Clients</span> Say</h2>
-                <div class="testimonials-container">
-                    <div class="testimonial-item p-8">
-                        <blockquote class="text-gray-700 italic">"AURAFX delivered beyond our expectations — excellent communication and top quality work."</blockquote>
-                        <div class="mt-4 font-semibold text-gray-900">— Jane Doe, CEO, Acme Co.</div>
+                <!-- Client Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="testimonials-container">
+                <div class="testimonials-header">
+                    <h2>What Our Clients Say</h2>
+                    <p>Hear from businesses that have transformed with our digital solutions</p>
+                </div>
+                
+                <!-- Testimonials Grid for Desktop -->
+                <div class="testimonials-grid">
+                    <!-- Maaz Vohra -->
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">
+                                Working with AURAFX was a game-changer for our business. Their web development team delivered a stunning website that perfectly represents our brand. The attention to detail and professionalism were outstanding.
+                            </p>
+                        </div> -->
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Maaz Vohra</h4>
+                                <p class="author-company">Business Owner</p>
+                                <div class="author-rating">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dr Dhanwantari Jha -->
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">
+                                As a healthcare professional, I needed a website that builds trust with patients. AURAFX created a beautiful, professional medical website that has significantly increased our online appointments. Highly recommended!
+                            </p>
+                        </div> -->
+                        <div class="testimonial-author">
+                            <div class="author-avatar">D</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Dr. Dhanwantari Jha</h4>
+                                <p class="author-company">Healthcare Professional</p>
+                                <div class="author-rating">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tosif Halani -->
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">
+                                The mobile app developed by AURAFX has revolutionized our customer engagement. Their team understood our vision perfectly and delivered a smooth, user-friendly application that our customers love using.
+                            </p>
+                        </div> -->
+                        <div class="testimonial-author">
+                            <div class="author-avatar">T</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Tosif Halani</h4>
+                                <p class="author-company">Entrepreneur</p>
+                                <div class="author-rating">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dr Rohit Nimavat -->
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">
+                                Excellent service! Our clinic's digital presence has improved dramatically. The SEO work done by AURAFX has brought us more patients than ever before. They truly understand the medical field's unique requirements.
+                            </p>
+                        </div> -->
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Dr. Rohit Nimavat</h4>
+                                <p class="author-company">Medical Practitioner</p>
+                                <div class="author-rating">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bhavya Auto -->
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">
+                                As an automobile business, we needed a robust website to showcase our inventory. AURAFX delivered beyond expectations with features that make car browsing easy for customers. Sales have increased by 40%!
+                            </p>
+                        </div> -->
+                        <div class="testimonial-author">
+                            <div class="author-avatar">B</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Bhavya Auto</h4>
+                                <p class="author-company">Automobile Business</p>
+                                <div class="author-rating">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FTV Café & Restro -->
+                    <div class="testimonial-card">
+                        <!-- <div class="testimonial-content">
+                            <div class="testimonial-quote">"</div>
+                            <p class="testimonial-text">
+                                Our restaurant's online ordering system created by AURAFX has been a tremendous success. The user-friendly interface and smooth functionality have made it easy for customers to order online. Highly recommended for any food business!
+                            </p>
+                        </div> -->
+                        <div class="testimonial-author">
+                            <div class="author-avatar">F</div>
+                            <div class="author-info">
+                                <h4 class="author-name">FTV Café & Restro</h4>
+                                <p class="author-company">Restaurant & Café</p>
+                                <div class="author-rating">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Testimonial Carousel for Mobile -->
+                <div class="testimonial-carousel">
+                    <div class="carousel-track" id="testimonialCarousel">
+                        <!-- Slides will be dynamically loaded -->
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="carousel-dots" id="carouselDots">
+                        <!-- Dots will be dynamically added -->
+                    </div>
+                </div>
+                
+                <!-- Testimonial Stats -->
+                
             </div>
         </section>
 
         <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-color">Ready to Start Your Project?</h2>
                 <p class="text-xl text-blue-100 mb-8">
                     Let's discuss how we can help transform your business with our digital solutions
                 </p>
@@ -378,12 +601,12 @@
                         <a href="https://www.facebook.com/share/1CpNDjPWqR/?mibextid=wwXIfr" class="text-gray-300 hover:text-white transition duration-300">
                             <i class="fab fa-facebook text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                        <!-- <a href="#" class="text-gray-300 hover:text-white transition duration-300">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
                         <a href="#" class="text-gray-300 hover:text-white transition duration-300">
                             <i class="fab fa-linkedin text-xl"></i>
-                        </a>
+                        </a> -->
                         <a href="https://www.instagram.com/aurafxofficial?igsh=OHIydmg0a2RsenE1&utm_source=qr" class="text-gray-300 hover:text-white transition duration-300">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
