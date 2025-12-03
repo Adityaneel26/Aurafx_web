@@ -21,7 +21,9 @@
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs">
-
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta property="og:title" content="AURAFX - Digital Marketing Agency India | Branding Company | SEO Company">
     <meta property="og:description" content="AURAFX provides professional web development, mobile apps, and digital solutions. Transform your business with our expert services.">
     <meta property="og:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
@@ -36,6 +38,21 @@
 <style>
     .text-color{
         color: white !important;
+        /* Floating animation for icons */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Background Grid Pattern */
+        .bg-grid-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
     }
 </style>
 <body class="bg-gray-50">
@@ -360,37 +377,122 @@
             -->
         </section>
 
-        <section id="process" class="py-16 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our <span class="text-blue-600">Process</span></h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">A transparent, iterative approach that keeps you involved and delivers measurable results.</p>
+        <section id="process" class="py-24 bg-gray-50 relative overflow-hidden">
+        
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-50 z-0"></div>
+        <!-- Gradient Blobs -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-24">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 font-bold tracking-wider uppercase text-xs mb-4 border border-blue-100">Workflow</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+                    From Concept to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Reality</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                    A streamlined journey designed for speed, transparency, and impact.
+                </p>
+            </div>
+
+            <!-- Staggered Grid Container -->
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                
+                <!-- Dashed Connector Line (Desktop) -->
+                <!-- It zig-zags visually due to card placement -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 -z-10 transform -translate-y-12"></div>
+
+                <!-- Step 1: Discover -->
+                <div class="group relative">
+                    <!-- Gradient Border Wrapper -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-100 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg z-20">01</div>
+                        
+                        <div class="mt-8 mb-6 w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl animate-float">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Discover</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            We analyze your vision, market fit, and technical requirements to build a solid foundation.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="card service-card animate-on-scroll">
-                        <div class="service-icon bg-blue-600">1</div>
-                        <h3 class="text-xl font-semibold mt-4">Discover</h3>
-                        <p class="text-gray-600 mt-2 text-sm">Understand goals, users, and constraints.</p>
-                    </div>
-                    <div class="card service-card animate-on-scroll">
-                        <div class="service-icon bg-purple-600">2</div>
-                        <h3 class="text-xl font-semibold mt-4">Plan</h3>
-                        <p class="text-gray-600 mt-2 text-sm">Define features, timeline and milestones.</p>
-                    </div>
-                    <div class="card service-card animate-on-scroll">
-                        <div class="service-icon bg-green-600">3</div>
-                        <h3 class="text-xl font-semibold mt-4">Build</h3>
-                        <p class="text-gray-600 mt-2 text-sm">Iterative delivery with continuous feedback.</p>
-                    </div>
-                    <div class="card service-card animate-on-scroll">
-                        <div class="service-icon bg-yellow-500">4</div>
-                        <h3 class="text-xl font-semibold mt-4">Grow</h3>
-                        <p class="text-gray-600 mt-2 text-sm">Launch, measure and scale for growth.</p>
+                <!-- Step 2: Plan (Staggered Down) -->
+                <div class="group relative md:mt-16">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-100 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg z-20">02</div>
+                        
+                        <div class="mt-8 mb-6 w-20 h-20 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 text-3xl animate-float" style="animation-delay: 1s;">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Plan</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Strategic roadmapping and prototyping to visualize the solution before writing a single line of code.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Step 3: Build -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-100 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg z-20">03</div>
+                        
+                        <div class="mt-8 mb-6 w-20 h-20 bg-pink-50 rounded-2xl flex items-center justify-center text-pink-600 text-3xl animate-float" style="animation-delay: 2s;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Build</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Agile development sprints with regular updates, ensuring the product evolves exactly as envisioned.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Grow (Staggered Down) -->
+                <div class="group relative md:mt-16">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl blur opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    
+                    <div class="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-100 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center text-center">
+                        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold border-4 border-white shadow-lg z-20">04</div>
+                        
+                        <div class="mt-8 mb-6 w-20 h-20 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-600 text-3xl animate-float" style="animation-delay: 3s;">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Grow</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Launch, monitor, and scale. We ensure your product performs perfectly in the real world.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-        </section>
+            
+            <!-- Bottom CTA -->
+            <div class="text-center mt-24">
+                <a href="#contact" class="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-gray-900 rounded-full hover:shadow-lg hover:shadow-blue-500/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 overflow-hidden">
+                    <span class="absolute inset-0 w-full h-full -mt-10 transition-all duration-700 ease-out transform translate-x-full translate-y-10 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span class="relative flex items-center">
+                        Start Your Project
+                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </section>
 
                 <!-- Client Testimonials Section -->
         <section class="testimonials-section">
