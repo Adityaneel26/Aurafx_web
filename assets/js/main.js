@@ -409,6 +409,9 @@ function initClientLogosMarquee() {
         { id: 5, name: "Prime Solutions", logo: "5.jpg" },
         { id: 6, name: "Visionary Brands", logo: "6.jpg" },
         { id: 7, name: "Elite Services", logo: "7.jpg" },
+        { id: 7, name: "Elite Services", logo: "11.png" },
+        { id: 7, name: "Elite Services", logo: "12.png" },
+        { id: 7, name: "Elite Services", logo: "10.jpg" },
         { id: 8, name: "Future Tech", logo: "8.png" }
         // { id: 8, name: "Future Tech", logo: "9.pdf" }
     ];
