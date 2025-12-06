@@ -1,107 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Home Page - Highest Priority -->
-    <url>
-        <loc>https://aurafx.in/</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <!-- About Page -->
-    <url>
-        <loc>https://aurafx.in/about.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Services Page -->
-    <url>
-        <loc>https://aurafx.in/services.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <!-- Portfolio Page -->
-    <url>
-        <loc>https://aurafx.in/portfolio.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <!-- Contact Page -->
-    <url>
-        <loc>https://aurafx.in/contact.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- Individual Service Pages (if you have them) -->
-    <url>
-        <loc>https://aurafx.in/web-development.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://aurafx.in/mobile-app-development.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://aurafx.in/seo-services.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://aurafx.in/digital-marketing.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>https://aurafx.in/ui-ux-design.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    
-    <!-- Blog Posts (if you have a blog) -->
-    <url>
-        <loc>https://aurafx.in/blog/</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <!-- Privacy Policy (Important for SEO) -->
-    <url>
-        <loc>https://aurafx.in/privacy-policy.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    
-    <!-- Terms of Service -->
-    <url>
-        <loc>https://aurafx.in/terms-of-service.html</loc>
-        <lastmod>2024-01-15</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://aurafx.in/</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>1.00</priority>
+   </url>
+
+   <url>
+      <loc>https://aurafx.in/services.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <url>
+      <loc>https://aurafx.in/portfolio.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <url>
+      <loc>https://aurafx.in/about.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <url>
+      <loc>https://aurafx.in/contact.html</loc>
+      <lastmod>2025-12-06</lastmod>
+      <priority>0.70</priority>
+   </url>
 
 </urlset>
