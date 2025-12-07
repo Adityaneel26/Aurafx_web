@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aurafx.in/sitemap.xml
+Sitemap: https://aurafx.in/sitemap.xml 
