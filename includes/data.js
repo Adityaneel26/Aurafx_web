@@ -4,7 +4,7 @@ const websiteData = {
         projects: 50,
         experience: 4
     },
-    services: [
+    services: [ 
         {
             title: "Web Development",
             shortDescription: "Custom websites and web applications built with modern technologies.",
