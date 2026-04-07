@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poster Generator - New Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: sans-serif;
+      background: linear-gradient(to bottom right, #f7f7f7, #e0eaff);
+      text-align: center;
+    }
+
+    canvas {
+      width: 100%;
+      height: auto;
+      max-width: 540px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    input, button {
+      margin: 8px 0;
+      padding: 10px;
+      width: 90%;
+      max-width: 300px;
+      font-size: 16px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff9900;
+    }
+
+    #downloadLink {
+      display: none;
+      margin-top: 10px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #28a745;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .credits {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .credits a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077cc;
+      cursor: pointer;
+    }
+
+    #adminPanel {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #888;
+    }
+
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Generate Your Poster - New Layout</h2>
+  <input type="file" id="imageUpload" accept="image/*">
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="generatePoster()">Save Poster</button>
+  <a id="downloadLink" href="#" download="poster.png">Click here to download your poster</a>
+
+  <div id="posterWrapper">
+    <canvas id="posterCanvas" width="1080" height="1350"></canvas>
+  </div>
+
+  <div id="adminPanel">
+    <h3>Poster Generation Report</h3>
+    <p>Total Posters: <span id="totalCount">0</span></p>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Name</th><th>Time</th></tr>
+      </thead>
+      <tbody id="recordTableBody"></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div class="credits">
+      <div>Designed by Rahul Mehta</div>
+      <div>Developed by Aditya Neel</div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <script>
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyAltvUIzWdRPbzJUeZmxJ9RiXJfS02OLqc",
+      authDomain: "web-app-b4237.firebaseapp.com",
+      projectId: "web-app-b4237",
+      storageBucket: "web-app-b4237.appspot.com",
+      messagingSenderId: "830298938265",
+      appId: "1:830298938265:web:8f89d6a1a22e565d0dd108",
+      measurementId: "G-1ECG1MXQNP",
+      databaseURL: "https://web-app-b4237-default-rtdb.firebaseio.com"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const canvas = document.getElementById("posterCanvas");
+    const ctx = canvas.getContext("2d");
+    const background = new Image();
+    background.src = "poster_new.jpg";
+
+    // Position for right side white area - corrected coordinates
+    const userImageX = 780;  // Correct right side position
+    const userImageY = 690;  // Correct upper position in white box
+    const userImageWidth = 310;  // Width for white box area
+    const userImageHeight = 350;  // Height for white box area
+
+    background.onload = () => {
+      ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+    };
+
+    function generatePoster() {
+      const file = document.getElementById("imageUpload").files[0];
+      const name = document.getElementById("nameInput").value.trim();
+      const downloadLink = document.getElementById("downloadLink");
+
+      if (!file || !name) {
+        alert("Please upload an image and enter a name.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const userImage = new Image();
+        userImage.onload = function() {
+          // Clear and redraw background
+          ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+          
+          // Draw user image in right side white area
+          ctx.drawImage(userImage, userImageX, userImageY, userImageWidth, userImageHeight);
+
+          // Draw name text below the image in right side
+          ctx.fillStyle = "#000000";  // Black text for better visibility
+          ctx.font = "bold 42px sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(name, 933, 1110);  // Centered below image in white box
+
+          // Create download link
+          const imageURL = canvas.toDataURL("image/png");
+          downloadLink.href = imageURL;
+          downloadLink.style.display = "block";
+
+          // Save record to Firebase
+          savePosterRecord(name);
+        };
+        userImage.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function savePosterRecord(name) {
+      const now = new Date().toLocaleString();
+      const newRecordRef = db.ref("posters_new").push();  // Different path for new layout
+      newRecordRef.set({ name, time: now });
+    }
+
+    function showAdminPanel() {
+      const tbody = document.getElementById("recordTableBody");
+      const totalSpan = document.getElementById("totalCount");
+      tbody.innerHTML = "";
+
+      db.ref("posters_new").once("value", snapshot => {  // Using new path
+        const records = snapshot.val();
+        const entries = records ? Object.values(records) : [];
+        totalSpan.textContent = entries.length;
+
+        entries.forEach((r, i) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `<td>${i + 1}</td><td>${r.name}</td><td>${r.time}</td>`;
+          tbody.appendChild(row);
+        });
+
+        document.getElementById("adminPanel").style.display = "block";
+      });
+    }
+  </script>
+</body>
+</html>
