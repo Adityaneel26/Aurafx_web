@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Poster Generator - New Layout</title>
+  <title>પરશુરામ જન્મોત્સવ aurafx</title>
+  <meta name="description" content="Create your personalized poster for પરશુરામ જન્મોત્સવ with AURAFX. Share the AURAFX poster generator link for a custom experience.">
+  <meta property="og:title" content="પરશુરામ જન્મોત્સવ aurafx">
+  <meta property="og:description" content="Create your personalized poster for પરશુરામ જન્મોત્સવ with AURAFX. Share the AURAFX poster generator link for a custom experience.">
+  <meta property="og:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
+  <meta property="og:url" content="https://aurafx.in/poster/index.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="પરશુરામ જન્મોત્સવ aurafx">
+  <meta name="twitter:description" content="Create your personalized poster for પરશુરામ જન્મોત્સવ with AURAFX. Share the AURAFX poster generator link for a custom experience.">
+  <meta name="twitter:image" content="https://aurafx.in/assets/img/aurafx-logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -76,6 +86,48 @@
       cursor: pointer;
     }
 
+    .service-block {
+      margin: 24px auto;
+      max-width: 560px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      padding: 22px 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .service-block img {
+      max-height: 140px;
+      width: auto;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .service-list li {
+      margin: 8px 0;
+      position: relative;
+      padding-left: 18px;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .service-list li::before {
+      content: '•';
+      color: #0077cc;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
     #adminPanel {
       display: none;
       margin-top: 30px;
@@ -117,6 +169,19 @@
 
   <div id="posterWrapper">
     <canvas id="posterCanvas" width="1080" height="1350"></canvas>
+  </div>
+
+  <div class="service-block">
+    <img src="../assets/img/aurafx-logo.png" alt="AURAFX logo">
+    <p style="font-size: 18px; font-weight: bold; margin: 0 0 14px; color: #1d1d1d;">Our services include:</p>
+    <ul class="service-list">
+      <li>Website building</li>
+      <li>Digital marketing</li>
+      <li>SEO</li>
+      <li>Graphic design</li>
+      <li>Social media</li>
+      <li>Video editing</li>
+    </ul>
   </div>
 
   <div id="adminPanel">
@@ -161,13 +226,13 @@
     const canvas = document.getElementById("posterCanvas");
     const ctx = canvas.getContext("2d");
     const background = new Image();
-    background.src = "poster_new.jpg";
+    background.src = "poster_new.jpeg";
 
     // Position for right side white area - corrected coordinates
-    const userImageX = 780;  // Correct right side position
-    const userImageY = 690;  // Correct upper position in white box
+    const userImageX = 680;  // Correct right side position
+    const userImageY = 845;  // Correct upper position in white box
     const userImageWidth = 310;  // Width for white box area
-    const userImageHeight = 350;  // Height for white box area
+    const userImageHeight = 340;  // Height for white box area
 
     background.onload = () => {
       ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -197,7 +262,7 @@
           ctx.fillStyle = "#000000";  // Black text for better visibility
           ctx.font = "bold 42px sans-serif";
           ctx.textAlign = "center";
-          ctx.fillText(name, 933, 1110);  // Centered below image in white box
+          ctx.fillText(name, 820, 1250);  // Centered below image in white box
 
           // Create download link
           const imageURL = canvas.toDataURL("image/png");
