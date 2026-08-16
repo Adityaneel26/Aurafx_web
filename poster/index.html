@@ -226,13 +226,13 @@
     const canvas = document.getElementById("posterCanvas");
     const ctx = canvas.getContext("2d");
     const background = new Image();
-    background.src = "poster_new.jpeg";
+    background.src = "Ambaji.jpeg";
 
     // Position for right side white area - corrected coordinates
-    const userImageX = 680;  // Correct right side position
-    const userImageY = 845;  // Correct upper position in white box
-    const userImageWidth = 310;  // Width for white box area
-    const userImageHeight = 340;  // Height for white box area
+    const userImageX = 760;  // Correct right side position
+    const userImageY = 860;  // Correct upper position in white box
+    const userImageWidth = 270;  // Width for white box area
+    const userImageHeight = 345;  // Height for white box area
 
     background.onload = () => {
       ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -255,6 +255,10 @@
           // Clear and redraw background
           ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
           
+          // Draw white background for image and text
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fillRect(userImageX, userImageY, userImageWidth, userImageHeight + 60);
+
           // Draw user image in right side white area
           ctx.drawImage(userImage, userImageX, userImageY, userImageWidth, userImageHeight);
 
@@ -262,7 +266,7 @@
           ctx.fillStyle = "#000000";  // Black text for better visibility
           ctx.font = "bold 42px sans-serif";
           ctx.textAlign = "center";
-          ctx.fillText(name, 820, 1250);  // Centered below image in white box
+          ctx.fillText(name, 890, 1250);  // Centered below image in white box
 
           // Create download link
           const imageURL = canvas.toDataURL("image/png");
